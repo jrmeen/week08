@@ -7,16 +7,20 @@ namespace ConsoleAppArray
     {
         static void Main(string[] args)
         {
-        	int[] data = new int[10];
-        	
-        	data[1] = 1;
-        	data[9] = 9;
-        	
-        	
-        	Console.WriteLine(data[1]);
-        	Console.WriteLine(data[9]);
-        	
-        	Console.ReadLine();
+            int[] data = new int[10];
+            Student[] student = new Student[31]; // สร้างอาร์เรย์ของวัตถุจากคลาส
+            Console.WriteLine(data.Length);
+            Console.WriteLine(student.Length);
+            Console.ReadLine();
+        }
+        class Student     // nested class
+        {
+            private string name;
+            public string Name
+            {
+                get { return name; }
+                set { name = value; }
+            }
         }
     }
 }
